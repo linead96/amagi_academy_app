@@ -5,30 +5,69 @@ exports[`renders null when the flashcard component state flipped is false 1`] = 
 exports[`renders two view with icon when the flashcard component state flipped is true 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#ffbcbc",
-        "borderColor": "red",
-        "borderWidth": 1,
-        "height": 100,
-        "justifyContent": "center",
-        "margin": 10,
-        "width": 300,
-      },
-      undefined,
-    ]
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
   }
 >
-  <Text
+  <View
     style={
-      Object {
-        "color": "#333333",
-        "margin": 20,
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#ffbcbc",
+          "borderColor": "red",
+          "borderWidth": 1,
+          "height": 100,
+          "justifyContent": "center",
+          "margin": 10,
+          "width": 300,
+        },
+        undefined,
+      ]
     }
   >
-    TouchableNativeFeedback is not supported on this platform!
-  </Text>
+    <Text
+      style={
+        Object {
+          "color": "#333333",
+          "margin": 20,
+        }
+      }
+    >
+      TouchableNativeFeedback is not supported on this platform!
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#ffbcbc",
+          "borderColor": "red",
+          "borderWidth": 1,
+          "height": 100,
+          "justifyContent": "center",
+          "margin": 10,
+          "width": 300,
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#333333",
+          "margin": 20,
+        }
+      }
+    >
+      TouchableNativeFeedback is not supported on this platform!
+    </Text>
+  </View>
 </View>
 `;

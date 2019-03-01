@@ -8,24 +8,26 @@ import { Icon } from 'expo';
 
 const AnswerChoices = (props) => {
   return props.flipped ? 
-    (<TouchableNativeFeedback>
-        <View style={styles.answerKeyChoicesContainer}>
-          <View style={styles.answerKeyChoicesCorrect}>
+    (<View style={styles.answerKeyChoicesContainer}>
+      <TouchableNativeFeedback>
+        <View style={styles.answerKeyChoicesCorrect}>
               <Icon.Ionicons
                 name={'md-checkmark'}
                 size={50}
                 color={'white'}
               />
-          </View>
-          <View style={styles.answerKeyChoicesWrong}>
+        </View>
+      </TouchableNativeFeedback>
+      <TouchableNativeFeedback>
+        <View style={styles.answerKeyChoicesWrong}>
               <Icon.Ionicons
                 name={'md-close'}
                 size={50}
                 color={'white'}
               />
-          </View>
         </View>
-     </TouchableNativeFeedback>
+      </TouchableNativeFeedback>
+    </View>
     ):null
 }
 
