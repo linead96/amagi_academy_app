@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders an icon based on the name of the icon passed as props into it, in this test md-checkmark is passed as props. 1`] = `[Function]`;

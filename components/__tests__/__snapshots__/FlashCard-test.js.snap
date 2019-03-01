@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a view with a question when the state flipped is false 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#265AD3",
+      "borderRadius": 10,
+      "flex": 6,
+      "height": "60%",
+      "justifyContent": "center",
+      "marginBottom": 10,
+      "marginTop": "10%",
+      "width": "80%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 30,
+        "margin": "10%",
+        "textAlign": "center",
+      }
+    }
+  >
+     Question: Ut porttitor lectus vehicula, mattis nulla vel, commodo nisi.
+  </Text>
+</View>
+`;
+
+exports[`renders a view with an answer when the state flipped is true 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#11CACA",
+      "borderRadius": 10,
+      "flex": 6,
+      "height": "60%",
+      "justifyContent": "center",
+      "marginBottom": 10,
+      "marginTop": "10%",
+      "width": "80%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 30,
+        "margin": "10%",
+        "textAlign": "center",
+      }
+    }
+  >
+     Answer: Ut porttitor lectus vehicula, mattis nulla vel, commodo nisi.
+  </Text>
+</View>
+`;

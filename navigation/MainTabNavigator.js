@@ -5,6 +5,8 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import SectionScreen from '../screens/SectionScreen';
+import FlashCardScreen from '../screens/FlashCardScreen';
+import AnswerKeyScreen from '../screens/AnswerKeyScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -17,16 +19,23 @@ HomeStack.navigationOptions = {
       focused={focused}
       name={
         Platform.OS === 'ios'
-          ? `ios-home${focused ? '' : '-outline'}`
+          ? 'ios-home'
           : 'md-home'
       }
     />
   ),
 };
 
-const SectionStack = createStackNavigator({
-  Section: SectionScreen,
-});
+const SectionStack = createStackNavigator(
+  {
+    Section: SectionScreen,
+    FlashCard: FlashCardScreen,
+    AnswerKey: AnswerKeyScreen
+  },
+  {
+    initialRouteName: 'Section'
+  }
+  );
 
 SectionStack.navigationOptions = {
   tabBarLabel: 'Sections',
