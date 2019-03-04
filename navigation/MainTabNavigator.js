@@ -6,7 +6,6 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import SectionScreen from '../screens/SectionScreen';
 import FlashCardScreen from '../screens/FlashCardScreen';
-import AnswerKeyScreen from '../screens/AnswerKeyScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -30,7 +29,6 @@ const SectionStack = createStackNavigator(
   {
     Section: SectionScreen,
     FlashCard: FlashCardScreen,
-    AnswerKey: AnswerKeyScreen
   },
   {
     initialRouteName: 'Section'

@@ -8,11 +8,11 @@ import {
 const FlashCard = (props) => {
   return props.flipped ? 
   (<View style={styles.flashcardAnswer}>
-  <Text style={styles.flashcardAnswerText}> Answer: Ut porttitor lectus vehicula, mattis nulla vel, commodo nisi.</Text>
+  <Text style={styles.flashcardAnswerText}> {props.answer} </Text>
   </View>) 
   : 
   (<View style={styles.flashcardQuestion}>
-  <Text style={styles.flashcardQuestionText}> Question: Ut porttitor lectus vehicula, mattis nulla vel, commodo nisi.</Text>
+  <Text style={styles.flashcardQuestionText}> {props.question} </Text>
   </View>)
 }
 

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders a view with a question when the state flipped is false 1`] = `
+exports[`test flashcardComponent renders a view with a question when the state flipped is false 1`] = `
 <View
   style={
     Object {
@@ -26,12 +26,14 @@ exports[`renders a view with a question when the state flipped is false 1`] = `
       }
     }
   >
-     Question: Ut porttitor lectus vehicula, mattis nulla vel, commodo nisi.
+     
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+     
   </Text>
 </View>
 `;
 
-exports[`renders a view with an answer when the state flipped is true 1`] = `
+exports[`test flashcardComponent renders a view with an answer when the state flipped is true 1`] = `
 <View
   style={
     Object {
@@ -56,7 +58,9 @@ exports[`renders a view with an answer when the state flipped is true 1`] = `
       }
     }
   >
-     Answer: Ut porttitor lectus vehicula, mattis nulla vel, commodo nisi.
+     
+    Lorem ipsum dolor sit amet.
+     
   </Text>
 </View>
 `;

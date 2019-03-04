@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test SectionScreen functions and interface renders flash card initial screen 1`] = `
+<View
+  style={
+    Object {
+      "alignContent": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "flexDirection": "row",
+      "flexWrap": "wrap",
+      "justifyContent": "center",
+      "paddingTop": 15,
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={null}
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#90F145",
+          "borderRadius": 45,
+          "height": 90,
+          "margin": 30,
+          "width": 90,
+        }
+      }
+    />
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={null}
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#2171D1",
+          "borderRadius": 45,
+          "height": 90,
+          "margin": 30,
+          "width": 90,
+        }
+      }
+    />
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={null}
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#CC003A",
+          "borderRadius": 45,
+          "height": 90,
+          "margin": 30,
+          "width": 90,
+        }
+      }
+    />
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={null}
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#67EE00",
+          "borderRadius": 45,
+          "height": 90,
+          "margin": 30,
+          "width": 90,
+        }
+      }
+    />
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={null}
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#4988D4",
+          "borderRadius": 45,
+          "height": 90,
+          "margin": 30,
+          "width": 90,
+        }
+      }
+    />
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={null}
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#F24576",
+          "borderRadius": 45,
+          "height": 90,
+          "margin": 30,
+          "width": 90,
+        }
+      }
+    />
+  </View>
+</View>
+`;
