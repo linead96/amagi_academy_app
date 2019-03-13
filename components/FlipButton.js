@@ -20,19 +20,20 @@ const FlipButton = (props) => {
 
 const styles = StyleSheet.create({
     flipButtonContainer: {
-        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        width: '30%',
+        width: '100%',
+        paddingLeft: '20%',
+        paddingRight: '20%',
     },
     flipButton: {
         backgroundColor: 'yellow',  
-        flex: 1,
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 25,
-        marginBottom: '5%',
+        paddingLeft: '20%',
+        paddingRight: '20%',
     },
     flipButton__text: {
         textAlign: 'center',
@@ -42,3 +43,4 @@ const styles = StyleSheet.create({
 });
 
 export default FlipButton;
+

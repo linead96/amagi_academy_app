@@ -45,7 +45,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 25,
-        marginBottom: '5%',
       },
       answerKeyChoicesWrong: {
         backgroundColor: '#F55241',  
@@ -54,7 +53,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 25,
-        marginBottom: '5%',
       },
 });
 
