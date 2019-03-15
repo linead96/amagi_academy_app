@@ -16,4 +16,10 @@ describe('test flashcardscreen functions and interface', () => {
         flashCardComponent.flippedIt();
         expect(flashCardComponent.state.flipped).toEqual(!originalFlip);
     });
+
+    test('return a random hex code', () => {
+        let flashCardComponent = renderer.create(<FlashCardScreen />).getInstance();
+        bg = flashCardComponent.generateRandomHexCode();
+        expect(bg).toEqual(expect.stringContaining('#'))
+    });
 });

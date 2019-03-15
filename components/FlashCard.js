@@ -11,7 +11,7 @@ const FlashCard = (props) => {
   <Text style={styles.flashcardAnswerText}> {props.answer} </Text>
   </View>) 
   : 
-  (<View style={styles.flashcardQuestion}>
+  (<View style={{ ...styles.flashcardQuestion, backgroundColor: props.bg}}>
   <Text style={styles.flashcardQuestionText}> {props.question} </Text>
   </View>)
 }
@@ -21,7 +21,6 @@ const styles = StyleSheet.create({
         flex: 6,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#265AD3', 
         width: '80%',
         height: '60%',
         borderRadius: 10,

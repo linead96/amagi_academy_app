@@ -12,21 +12,62 @@ export default class FlashCardScreen extends React.Component {
   constructor(props){
     super(props)
     this.state={
-      preGestureMove: 0,
-      gestureMove: 0,
       flipped: false,
       flashCardContent: [
         {
           question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          answer: 'Lorem ipsum dolor sit amet.'
+          answer: 'Lorem ipsum dolor sit amet.',
+          color: ''
         },
         {
           question:  'Donec bibendum velit lorem, ac commodo lacus convallis a.',
-          answer:  'Donec bibendum velit lorem.'
+          answer:  'Donec bibendum velit lorem.',
+          color: ''
         },
         {
           question: 'Integer eu malesuada mi, a lobortis massa.',
-          answer: 'Integer eu malesuada mi.'
+          answer: 'Integer eu malesuada mi.',
+          color: ''
+        },
+        {
+          question: 'Eget duis at tellus at urna condimentum. Viverra nibh cras pulvinar mattis.',
+          answer: 'Viverra nibh cras pulvinar mattis.',
+          color: ''
+        },
+        {
+          question: 'Neque aliquam vestibulum morbi blandit cursus. Ut enim blandit volutpat maecenas volutpat blandit.',
+          answer: 'Ut enim blandit volutpat maecenas volutpat blandit.',
+          color: ''
+        },
+        {
+          question: 'Arcu cursus vitae congue mauris rhoncus aenean.',
+          answer: 'Arcu cursus vitae.',
+          color: ''
+        },
+        {
+          question: 'Condimentum lacinia quis vel eros donec ac. Interdum velit laoreet id donec.',
+          answer: 'Interdum velit laoreet id donec.',
+          color: ''
+        },
+        {
+          question: 'Erat pellentesque adipiscing commodo elit. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. ',
+          answer: 'Erat pellentesque adipiscing commodo elit.',
+          color: ''
+        },
+        {
+          question: 'Nisl purus in mollis nunc sed id semper risus in.',
+          answer: 'Nisl purus in mollis nunc.',
+          color: ''
+        },
+        {
+          question: 'Volutpat diam ut venenatis tellus in metus vulputate eu.',
+          answer: 'Volutpat diam ut venenatis.',
+          color: ''
+        },
+        {
+          question: 'Volutpat lacus laoreet non curabitur gravida arcu ac.',
+          answer: 'Volutpat lacus laoreet non.',
+          color: ''
         },
       ],
       current: 0,
@@ -35,34 +76,22 @@ export default class FlashCardScreen extends React.Component {
     this._panResponder = PanResponder.create(
       {
         onStartShouldSetPanResponder:(evt, gestureState) => true,
-        onPanResponderMove:(evt,gestureState) => {
-          this.setState({preGestureMove: this.state.gestureMove})
-          this.setState({gestureMove:gestureState.moveX})
-
-          let actionValue = (this.state.gestureMove - this.state.preGestureMove);
-
-          if(
-            (actionValue > 100) 
-            &&
-            this.state.current < this.state.flashCardContent.length-1
-            ){
+        onPanResponderEnd:(evt, gestureState) => {
+          dx = gestureState.dx;
+          if(dx < -100 && this.state.current < this.state.flashCardContent.length-1){
+            this.setState(previousState => (
+              {
+                current: previousState.current+1,
+              }
+            ))
+            if(this.state.flipped === true){
               this.setState(previousState => (
                 {
-                  current: previousState.current+1,
+                  flipped: !previousState.flipped
                 }
               ))
-              if(this.state.flipped === true){
-                this.setState(previousState => (
-                  {
-                    flipped: !previousState.flipped
-                  }
-                ))
-              }
-          }else if(
-            (actionValue < -100)
-            &&
-            this.state.current > 0 
-          ){
+            }
+          }else if(dx > 100 && this.state.current > 0 ){
             this.setState(previousState => (
               {
                 current: previousState.current-1,
@@ -81,6 +110,12 @@ export default class FlashCardScreen extends React.Component {
     )
     
   }
+  
+  componentDidMount(){
+    
+  }
+
+
     
 
   flippedIt = () => {
@@ -89,6 +124,10 @@ export default class FlashCardScreen extends React.Component {
         flipped: !previousState.flipped
       }
     ))
+  }
+
+  generateRandomHexCode = () => {
+      return "#" + Math.random().toString(16).slice(2, 8)
   }
   
 
@@ -100,7 +139,8 @@ export default class FlashCardScreen extends React.Component {
         {...this._panResponder.panHandlers} >
           <FlashCard flipped = {this.state.flipped}
               question = {this.state.flashCardContent[this.state.current].question}
-              answer = {this.state.flashCardContent[this.state.current].answer}/>
+              answer = {this.state.flashCardContent[this.state.current].answer}
+              bg = {this.generateRandomHexCode()}/>
         </View>
         <View style = {styles.buttons}>
           <FlipButton flip = {this.flippedIt}/>
