@@ -7,12 +7,12 @@ import {
 
 const FlashCard = (props) => {
   return props.flipped ? 
-  (<View style={styles.flashcardAnswer}>
-  <Text style={styles.flashcardAnswerText}> {props.answer} </Text>
+  (<View style={{ ...styles.flashcardAnswer, backgroundColor: props.bg}}>
+  <Text style={styles.flashcardAnswerText}> {`Answer:\n${props.answer}`} </Text>
   </View>) 
   : 
   (<View style={{ ...styles.flashcardQuestion, backgroundColor: props.bg}}>
-  <Text style={styles.flashcardQuestionText}> {props.question} </Text>
+  <Text style={styles.flashcardQuestionText}> {`Question:\n${props.question}`} </Text>
   </View>)
 }
 
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         width: '80%',
         height: '60%',
-        borderRadius: 10,
+        borderRadius: 30,
         marginTop: '10%',    
         marginBottom: 10,
       },
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#11CACA', 
         width: '80%',
         height: '60%',
-        borderRadius: 10,
+        borderRadius: 30,
         marginTop: '10%',    
         marginBottom: 10,
       },
@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 30,
         margin: '10%',
+        color: 'white'
       },   
 });
 

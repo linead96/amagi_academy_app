@@ -112,12 +112,18 @@ export default class FlashCardScreen extends React.Component {
   }
   
   componentDidMount(){
-    
+
+    if(this.state.flashCardContent[0].color === ''){
+      let updatedFlashCardContent = this.state.flashCardContent.map(content=> {
+        return {...content, color:this.generateRandomHexCode()};
+      })
+
+      this.setState({
+        flashCardContent: updatedFlashCardContent
+      })
+    }
   }
-
-
     
-
   flippedIt = () => {
     this.setState(previousState => (
       {
@@ -140,7 +146,7 @@ export default class FlashCardScreen extends React.Component {
           <FlashCard flipped = {this.state.flipped}
               question = {this.state.flashCardContent[this.state.current].question}
               answer = {this.state.flashCardContent[this.state.current].answer}
-              bg = {this.generateRandomHexCode()}/>
+              bg = {this.state.flashCardContent[this.state.current].color}/>
         </View>
         <View style = {styles.buttons}>
           <FlipButton flip = {this.flippedIt}/>
