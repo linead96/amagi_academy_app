@@ -2,8 +2,18 @@ import React from 'react';
 import {
   StyleSheet,
   View,
-  Text
+  Text,
 } from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    fontSize: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+  },
+});
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -17,15 +27,4 @@ export default class HomeScreen extends React.Component {
       </View>
     );
   }
-
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    fontSize: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-  },
-});

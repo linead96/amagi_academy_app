@@ -5,8 +5,8 @@ exports[`test flashcardComponent renders a view with a question when the state f
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "#265AD3",
-      "borderRadius": 10,
+      "backgroundColor": undefined,
+      "borderRadius": 30,
       "flex": 6,
       "height": "60%",
       "justifyContent": "center",
@@ -27,7 +27,8 @@ exports[`test flashcardComponent renders a view with a question when the state f
     }
   >
      
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Question:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
      
   </Text>
 </View>
@@ -38,8 +39,8 @@ exports[`test flashcardComponent renders a view with an answer when the state fl
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "#11CACA",
-      "borderRadius": 10,
+      "backgroundColor": undefined,
+      "borderRadius": 30,
       "flex": 6,
       "height": "60%",
       "justifyContent": "center",
@@ -52,6 +53,7 @@ exports[`test flashcardComponent renders a view with an answer when the state fl
   <Text
     style={
       Object {
+        "color": "white",
         "fontSize": 30,
         "margin": "10%",
         "textAlign": "center",
@@ -59,7 +61,8 @@ exports[`test flashcardComponent renders a view with an answer when the state fl
     }
   >
      
-    Lorem ipsum dolor sit amet.
+    Answer:
+Lorem ipsum dolor sit amet.
      
   </Text>
 </View>
