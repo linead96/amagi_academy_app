@@ -5,13 +5,18 @@ exports[`test flashcardComponent renders a view with a question when the state f
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": undefined,
+      "backgroundColor": "#FFFFFF",
       "borderRadius": 30,
       "flex": 6,
       "height": "60%",
       "justifyContent": "center",
       "marginBottom": 10,
       "marginTop": "10%",
+      "transform": Array [
+        Object {
+          "rotateX": "0deg",
+        },
+      ],
       "width": "80%",
     }
   }
@@ -26,10 +31,8 @@ exports[`test flashcardComponent renders a view with a question when the state f
       }
     }
   >
-     
     Question:
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-     
   </Text>
 </View>
 `;
@@ -39,13 +42,18 @@ exports[`test flashcardComponent renders a view with an answer when the state fl
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": undefined,
+      "backgroundColor": "#FFFFFF",
       "borderRadius": 30,
       "flex": 6,
       "height": "60%",
       "justifyContent": "center",
       "marginBottom": 10,
       "marginTop": "10%",
+      "transform": Array [
+        Object {
+          "rotateX": "0deg",
+        },
+      ],
       "width": "80%",
     }
   }
@@ -60,10 +68,8 @@ exports[`test flashcardComponent renders a view with an answer when the state fl
       }
     }
   >
-     
     Answer:
 Lorem ipsum dolor sit amet.
-     
   </Text>
 </View>
 `;

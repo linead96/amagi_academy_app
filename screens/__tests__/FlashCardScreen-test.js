@@ -4,7 +4,6 @@ import renderer from 'react-test-renderer';
 import FlashCardScreen from '../FlashCardScreen';
 
 describe('test flashcardscreen functions and interface', () => {
-
   test('renders flash card initial screen', () => {
     const tree = renderer.create(<FlashCardScreen />).toJSON();
     expect(tree).toMatchSnapshot();

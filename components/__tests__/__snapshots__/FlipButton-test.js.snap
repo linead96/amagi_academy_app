@@ -13,31 +13,40 @@ exports[`test FlipButton component renders correctly 1`] = `
   }
 >
   <View
+    accessible={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#ffbcbc",
-          "borderColor": "red",
-          "borderWidth": 1,
-          "height": 100,
-          "justifyContent": "center",
-          "margin": 10,
-          "width": 300,
-        },
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "yellow",
+        "borderRadius": 25,
+        "justifyContent": "center",
+        "paddingLeft": "20%",
+        "paddingRight": "20%",
+        "transform": Array [
+          Object {
+            "scale": 1,
+          },
+        ],
+        "width": "100%",
+      }
     }
   >
     <Text
       style={
         Object {
-          "color": "#333333",
-          "margin": 20,
+          "fontSize": 30,
+          "margin": 10,
+          "textAlign": "center",
         }
       }
     >
-      TouchableNativeFeedback is not supported on this platform!
+      Flip
     </Text>
   </View>
 </View>

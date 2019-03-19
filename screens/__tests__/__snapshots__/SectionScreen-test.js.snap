@@ -16,141 +16,141 @@ exports[`test SectionScreen functions and interface renders flash card initial s
 >
   <View
     accessible={true}
-    isTVSelectable={true}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    style={null}
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#90F145",
-          "borderRadius": 45,
-          "height": 90,
-          "margin": 30,
-          "width": 90,
-        }
+    style={
+      Object {
+        "backgroundColor": "#90F145",
+        "borderRadius": 45,
+        "height": 90,
+        "margin": 30,
+        "transform": Array [
+          Object {
+            "scale": 1,
+          },
+        ],
+        "width": 90,
       }
-    />
-  </View>
+    }
+  />
   <View
     accessible={true}
-    isTVSelectable={true}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    style={null}
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#2171D1",
-          "borderRadius": 45,
-          "height": 90,
-          "margin": 30,
-          "width": 90,
-        }
+    style={
+      Object {
+        "backgroundColor": "#2171D1",
+        "borderRadius": 45,
+        "height": 90,
+        "margin": 30,
+        "transform": Array [
+          Object {
+            "scale": 1,
+          },
+        ],
+        "width": 90,
       }
-    />
-  </View>
+    }
+  />
   <View
     accessible={true}
-    isTVSelectable={true}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    style={null}
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#CC003A",
-          "borderRadius": 45,
-          "height": 90,
-          "margin": 30,
-          "width": 90,
-        }
+    style={
+      Object {
+        "backgroundColor": "#CC003A",
+        "borderRadius": 45,
+        "height": 90,
+        "margin": 30,
+        "transform": Array [
+          Object {
+            "scale": 1,
+          },
+        ],
+        "width": 90,
       }
-    />
-  </View>
+    }
+  />
   <View
     accessible={true}
-    isTVSelectable={true}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    style={null}
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#67EE00",
-          "borderRadius": 45,
-          "height": 90,
-          "margin": 30,
-          "width": 90,
-        }
+    style={
+      Object {
+        "backgroundColor": "#67EE00",
+        "borderRadius": 45,
+        "height": 90,
+        "margin": 30,
+        "transform": Array [
+          Object {
+            "scale": 1,
+          },
+        ],
+        "width": 90,
       }
-    />
-  </View>
+    }
+  />
   <View
     accessible={true}
-    isTVSelectable={true}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    style={null}
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#4988D4",
-          "borderRadius": 45,
-          "height": 90,
-          "margin": 30,
-          "width": 90,
-        }
+    style={
+      Object {
+        "backgroundColor": "#4988D4",
+        "borderRadius": 45,
+        "height": 90,
+        "margin": 30,
+        "transform": Array [
+          Object {
+            "scale": 1,
+          },
+        ],
+        "width": 90,
       }
-    />
-  </View>
+    }
+  />
   <View
     accessible={true}
-    isTVSelectable={true}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    style={null}
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#F24576",
-          "borderRadius": 45,
-          "height": 90,
-          "margin": 30,
-          "width": 90,
-        }
+    style={
+      Object {
+        "backgroundColor": "#F24576",
+        "borderRadius": 45,
+        "height": 90,
+        "margin": 30,
+        "transform": Array [
+          Object {
+            "scale": 1,
+          },
+        ],
+        "width": 90,
       }
-    />
-  </View>
+    }
+  />
 </View>
 `;

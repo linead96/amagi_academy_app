@@ -35,13 +35,18 @@ exports[`test flashcardscreen functions and interface renders flash card initial
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#314bde",
+          "backgroundColor": "#05acb5",
           "borderRadius": 30,
           "flex": 6,
           "height": "60%",
           "justifyContent": "center",
           "marginBottom": 10,
           "marginTop": "10%",
+          "transform": Array [
+            Object {
+              "rotateX": "0deg",
+            },
+          ],
           "width": "80%",
         }
       }
@@ -56,10 +61,8 @@ exports[`test flashcardscreen functions and interface renders flash card initial
           }
         }
       >
-         
         Question:
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-         
       </Text>
     </View>
   </View>
@@ -82,31 +85,40 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       }
     >
       <View
+        accessible={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#ffbcbc",
-              "borderColor": "red",
-              "borderWidth": 1,
-              "height": 100,
-              "justifyContent": "center",
-              "margin": 10,
-              "width": 300,
-            },
-            undefined,
-          ]
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "yellow",
+            "borderRadius": 25,
+            "justifyContent": "center",
+            "paddingLeft": "20%",
+            "paddingRight": "20%",
+            "transform": Array [
+              Object {
+                "scale": 1,
+              },
+            ],
+            "width": "100%",
+          }
         }
       >
         <Text
           style={
             Object {
-              "color": "#333333",
-              "margin": 20,
+              "fontSize": 30,
+              "margin": 10,
+              "textAlign": "center",
             }
           }
         >
-          TouchableNativeFeedback is not supported on this platform!
+          Flip
         </Text>
       </View>
     </View>

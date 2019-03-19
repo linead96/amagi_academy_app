@@ -3,25 +3,25 @@
 exports[`renders touchablehighlight component which reflects the passed props color, in this test the color is red 1`] = `
 <View
   accessible={true}
-  isTVSelectable={true}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
   onResponderTerminate={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  style={null}
->
-  <View
-    style={
-      Object {
-        "backgroundColor": "red",
-        "borderRadius": 45,
-        "height": 90,
-        "margin": 30,
-        "width": 90,
-      }
+  style={
+    Object {
+      "backgroundColor": "red",
+      "borderRadius": 45,
+      "height": 90,
+      "margin": 30,
+      "transform": Array [
+        Object {
+          "scale": 1,
+        },
+      ],
+      "width": 90,
     }
-  />
-</View>
+  }
+/>
 `;
