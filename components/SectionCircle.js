@@ -22,8 +22,8 @@ const SectionCircle = (props) => {
   const scaleValue = new Animated.Value(0);
 
   const cardScale = scaleValue.interpolate({
-    inputRange: [0, 0.5, 1],
-    outputRange: [1, 1.5, 2],
+    inputRange: [0, 0.3, 0.5, 0.7, 1],
+    outputRange: [1, 4, 6, 8, 10],
   });
 
   const transformStyle = {

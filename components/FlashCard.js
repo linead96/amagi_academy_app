@@ -1,8 +1,9 @@
 import React from 'react';
 import {
-  View,
   Text,
   StyleSheet,
+  Animated,
+  Easing,
 } from 'react-native';
 import PropTypes from 'prop-types';
 
@@ -42,29 +43,81 @@ const styles = StyleSheet.create({
   },
 });
 
-const FlashCard = (props) => {
-  const {
-    flipped,
-    bg,
-    question,
-    answer,
-  } = props;
-  return flipped
-    ? (
-      <View style={{ ...styles.flashcardAnswer, backgroundColor: bg }}>
-        <Text style={styles.flashcardAnswerText}>
-          {`Answer:\n${answer}`}
-        </Text>
-      </View>
-    )
-    : (
-      <View style={{ ...styles.flashcardQuestion, backgroundColor: bg }}>
-        <Text style={styles.flashcardQuestionText}>
-          {`Question:\n${question}`}
-        </Text>
-      </View>
-    );
-};
+class FlashCard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.animatedValue = new Animated.Value(0);
+  }
+
+  componentDidUpdate(prevProps) {
+    const { flipped } = this.props;
+    if (flipped !== prevProps.flipped) {
+      this.animate();
+    }
+  }
+
+  animate() {
+    this.animatedValue.setValue(0);
+    Animated.timing(
+      this.animatedValue,
+      {
+        toValue: 1,
+        duration: 1000,
+        easing: Easing.linear,
+      },
+    ).start();
+  }
+
+  stopAnimate() {
+    Animated.timing(this.animatedValue, {
+      toValue: 0,
+      duration: 0,
+      easing: Easing.linear,
+      useNativeDriver: true,
+    }).start();
+  }
+
+
+  render() {
+    const {
+      flipped,
+      bg,
+      question,
+      answer,
+    } = this.props;
+
+    const rotateX = this.animatedValue.interpolate({
+      inputRange: [0, 0.99, 1],
+      outputRange: ['0deg', '180deg', '0deg'],
+    });
+
+    return flipped
+      ? (
+        <Animated.View style={{
+          ...styles.flashcardAnswer,
+          backgroundColor: bg,
+          transform: [{ rotateX }],
+        }}
+        >
+          <Text style={styles.flashcardAnswerText}>
+            {`Answer:\n${answer}`}
+          </Text>
+        </Animated.View>
+      )
+      : (
+        <Animated.View style={{
+          ...styles.flashcardQuestion,
+          backgroundColor: bg,
+          transform: [{ rotateX }],
+        }}
+        >
+          <Text style={styles.flashcardQuestionText}>
+            {`Question:\n${question}`}
+          </Text>
+        </Animated.View>
+      );
+  }
+}
 
 FlashCard.propTypes = {
   flipped: PropTypes.bool.isRequired,
