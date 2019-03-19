@@ -1,9 +1,10 @@
 import React from 'react';
 import {
   View,
-  TouchableNativeFeedback,
+  TouchableWithoutFeedback,
   Text,
   StyleSheet,
+  Animated,
 } from 'react-native';
 import PropTypes from 'prop-types';
 
@@ -31,15 +32,43 @@ const styles = StyleSheet.create({
   },
 });
 
-const FlipButton = props => (
-  <View style={styles.flipButtonContainer}>
-    <TouchableNativeFeedback onPress={() => props.flip()}>
-      <View style={styles.flipButton}>
-        <Text style={styles.flipButton__text}>Flip</Text>
+class FlipButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.springValue = new Animated.Value(1);
+  }
+
+  spring() {
+    this.springValue.setValue(0);
+    Animated.spring(
+      this.springValue,
+      {
+        toValue: 1,
+        friction: 1,
+      },
+    ).start();
+  }
+
+  render() {
+    const { flip } = this.props;
+    const transformStyle = {
+      ...styles.flipButton,
+      transform: [{ scale: this.springValue }],
+    };
+    return (
+      <View style={styles.flipButtonContainer}>
+        <TouchableWithoutFeedback
+          onPressIn={() => this.spring()}
+          onPressOut={() => flip()}
+        >
+          <Animated.View style={transformStyle}>
+            <Text style={styles.flipButton__text}>Flip</Text>
+          </Animated.View>
+        </TouchableWithoutFeedback>
       </View>
-    </TouchableNativeFeedback>
-  </View>
-);
+    );
+  }
+}
 
 FlipButton.propTypes = {
   flip: PropTypes.func.isRequired,
