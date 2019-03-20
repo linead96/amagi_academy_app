@@ -3,6 +3,7 @@ import {
   StyleSheet,
   View,
   PanResponder,
+  Animated,
 } from 'react-native';
 import FlipButton from '../components/FlipButton';
 import FlashCard from '../components/FlashCard';
@@ -88,43 +89,59 @@ export default class FlashCardScreen extends React.Component {
       ],
       current: 0,
     };
+  }
 
-    this._panResponder = PanResponder.create(
-      {
-        onStartShouldSetPanResponder: () => true,
-        onPanResponderEnd: (evt, gestureState) => {
-          const { dx } = gestureState;
-          const { current, flashCardContent, flipped } = this.state;
-          if (dx < -100 && current < flashCardContent.length - 1) {
-            this.setState(previousState => (
-              {
-                current: previousState.current + 1,
-              }
-            ));
-            if (flipped === true) {
-              this.setState(previousState => (
-                {
-                  flipped: !previousState.flipped,
-                }
-              ));
-            }
-          } else if (dx > 100 && current > 0) {
-            this.setState(previousState => (
-              {
-                current: previousState.current - 1,
-              }
-            ));
-            if (flipped === true) {
-              this.setState(previousState => (
-                {
-                  flipped: !previousState.flipped,
-                }
-              ));
-            }
-          }
-        },
+  componentWillMount() {
+    this.animatedValue = new Animated.ValueXY();
+    this.panResponder = PanResponder.create({
+      onStartShouldSetPanResponder: () => true,
+      onMoveShouldSetPanResponder: () => true,
+      onPanResponderGrant: () => {
+
       },
-    );
+      onPanResponderMove: Animated.event([
+        null, { dx: this.animatedValue.x, dy: this.animatedValue.y },
+      ]),
+      onPanResponderRelease: (evt, gestureState) => {
+        const { dx } = gestureState;
+
+        const { current, flashCardContent, flipped } = this.state;
+        if (dx > 100 && current < flashCardContent.length - 1) {
+          this.setState(previousState => (
+            {
+              current: previousState.current + 1,
+            }
+          ));
+          if (flipped === true) {
+            this.setState(previousState => (
+              {
+                flipped: !previousState.flipped,
+              }
+            ));
+          }
+          this.animatedValue.setValue({ x: 0, y: 0 });
+        } else if (dx < -100 && current > 0) {
+          this.setState(previousState => (
+            {
+              current: previousState.current - 1,
+            }
+          ));
+          if (flipped === true) {
+            this.setState(previousState => (
+              {
+                flipped: !previousState.flipped,
+              }
+            ));
+          }
+          this.animatedValue.setValue({ x: 0, y: 0 });
+        } else {
+          Animated.spring(this.animatedValue, {
+            toValue: { x: 0, y: 0 },
+            friction: 5,
+          }).start();
+        }
+      },
+    });
   }
 
   componentDidMount() {
@@ -152,11 +169,14 @@ export default class FlashCardScreen extends React.Component {
 
   render() {
     const { flipped, flashCardContent, current } = this.state;
+    const animatedStyle = {
+      transform: this.animatedValue.getTranslateTransform(),
+    };
     return (
       <View style={styles.container}>
-        <View
-          style={styles.flashcard}
-          {...this._panResponder.panHandlers}
+        <Animated.View
+          style={[styles.flashcard, animatedStyle]}
+          {...this.panResponder.panHandlers}
         >
           <FlashCard
             flipped={flipped}
@@ -164,7 +184,7 @@ export default class FlashCardScreen extends React.Component {
             answer={flashCardContent[current].answer}
             bg={flashCardContent[current].color}
           />
-        </View>
+        </Animated.View>
         <View style={styles.buttons}>
           <FlipButton
             flip={this.flippedIt}

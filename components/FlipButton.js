@@ -44,6 +44,7 @@ class FlipButton extends React.Component {
       this.springValue,
       {
         toValue: 1,
+        tension: 1,
         friction: 1,
       },
     ).start();

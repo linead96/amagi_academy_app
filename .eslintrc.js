@@ -22,6 +22,6 @@ module.exports = {
     ],
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "no-underscore-dangle": ["error", { "allowAfterThis": true }]
+        "no-underscore-dangle": ["error", { "allowAfterThis": true }],
     }
 };
